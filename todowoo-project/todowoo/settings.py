@@ -29,7 +29,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # 環境変数からSECRET_KEYを取得する設定
 SECRET_KEY = env.get_value('SECRET_KEY')
-# SECRET_KEY ='=#3!kbty9*pb04mqa1g8y9&li=g9*(9(^swhdn+0f8@&rz9nq*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # 環境変数からDEBUGを取得。デフォルトはTrue（本番環境モード）
