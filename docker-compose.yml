@@ -8,15 +8,13 @@ services:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - djangonetwork
-    # environment:
-    # - 'POSTGRES_USER=django_db_user'
-    # - 'POSTGRES_PASSWORD=password1234'
-    # - 'POSTGRES_DB=django_db'
     ports:
       - '5433:5432'
     env_file:
       # 環境変数に設定するファイル
       - ./postgres/.env.db
+    environment:
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
 
   web:
     build:
